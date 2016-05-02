@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{679295D4-8FC7-4E4D-BF44-B78D1E958D3F}</ProjectGuid>
+    <ProjectGuid>{473FA86A-19EE-4648-B2EB-4020BA3479C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HelperLib</RootNamespace>
-    <AssemblyName>HelperLib</AssemblyName>
+    <RootNamespace>HQOrderEntryImplementation</RootNamespace>
+    <AssemblyName>HQOrderEntryImplementation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,8 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenericSerializer.cs" />
+    <Compile Include="HQOrderEntryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelperLib\HelperLib.csproj">
+      <Project>{679295d4-8fc7-4e4d-bf44-b78d1e958d3f}</Project>
+      <Name>HelperLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HQOrderEntryServiceInterface\HQOrderEntryServiceInterface.csproj">
+      <Project>{e383543d-f779-4bee-b8fb-c737204a53f7}</Project>
+      <Name>HQOrderEntryServiceInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

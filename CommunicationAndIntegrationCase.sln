@@ -17,6 +17,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQOrderEntryServiceInterfac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperLib", "HelperLib\HelperLib.csproj", "{679295D4-8FC7-4E4D-BF44-B78D1E958D3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQOrderEntryImplementation", "HQOrderEntryImplementation\HQOrderEntryImplementation.csproj", "{473FA86A-19EE-4648-B2EB-4020BA3479C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQOrderEntryServiceHost", "HQOrderEntryServiceHost\HQOrderEntryServiceHost.csproj", "{3E37E58C-E9C1-4279-AB37-3F740606125D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderEntryApplication", "OrderEntryApplication\OrderEntryApplication.csproj", "{32C2C88E-E7FB-4562-B2E3-51AA9251DEC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +37,18 @@ Global
 		{679295D4-8FC7-4E4D-BF44-B78D1E958D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{679295D4-8FC7-4E4D-BF44-B78D1E958D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{679295D4-8FC7-4E4D-BF44-B78D1E958D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{473FA86A-19EE-4648-B2EB-4020BA3479C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{473FA86A-19EE-4648-B2EB-4020BA3479C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{473FA86A-19EE-4648-B2EB-4020BA3479C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{473FA86A-19EE-4648-B2EB-4020BA3479C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E37E58C-E9C1-4279-AB37-3F740606125D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E37E58C-E9C1-4279-AB37-3F740606125D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E37E58C-E9C1-4279-AB37-3F740606125D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E37E58C-E9C1-4279-AB37-3F740606125D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32C2C88E-E7FB-4562-B2E3-51AA9251DEC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32C2C88E-E7FB-4562-B2E3-51AA9251DEC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32C2C88E-E7FB-4562-B2E3-51AA9251DEC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32C2C88E-E7FB-4562-B2E3-51AA9251DEC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +56,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E383543D-F779-4BEE-B8FB-C737204A53F7} = {7881FA74-7FC4-4068-80F6-1B38A9A46057}
 		{679295D4-8FC7-4E4D-BF44-B78D1E958D3F} = {6CC06E4E-9896-42D8-9DAE-DB49DDDEDDB8}
+		{473FA86A-19EE-4648-B2EB-4020BA3479C0} = {68FC26AB-77BC-4E82-91E7-94C5DB1869D5}
+		{3E37E58C-E9C1-4279-AB37-3F740606125D} = {68FC26AB-77BC-4E82-91E7-94C5DB1869D5}
+		{32C2C88E-E7FB-4562-B2E3-51AA9251DEC6} = {2C2BD212-4665-4EA4-9C3E-F6FE9628C58E}
 	EndGlobalSection
 EndGlobal
