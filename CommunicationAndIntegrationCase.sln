@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Branches", "Branches", "{705DAE48-63EF-4AD7-A86F-BEDFB5DC41C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{2C2BD212-4665-4EA4-9C3E-F6FE9628C58E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelperLib", "HelperLib", "{6CC06E4E-9896-42D8-9DAE-DB49DDDEDDB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceInterfaces", "ServiceInterfaces", "{7881FA74-7FC4-4068-80F6-1B38A9A46057}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{68FC26AB-77BC-4E82-91E7-94C5DB1869D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQOrderEntryServiceInterface", "HQOrderEntryServiceInterface\HQOrderEntryServiceInterface.csproj", "{E383543D-F779-4BEE-B8FB-C737204A53F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperLib", "HelperLib\HelperLib.csproj", "{679295D4-8FC7-4E4D-BF44-B78D1E958D3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E383543D-F779-4BEE-B8FB-C737204A53F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E383543D-F779-4BEE-B8FB-C737204A53F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E383543D-F779-4BEE-B8FB-C737204A53F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E383543D-F779-4BEE-B8FB-C737204A53F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679295D4-8FC7-4E4D-BF44-B78D1E958D3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679295D4-8FC7-4E4D-BF44-B78D1E958D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679295D4-8FC7-4E4D-BF44-B78D1E958D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679295D4-8FC7-4E4D-BF44-B78D1E958D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E383543D-F779-4BEE-B8FB-C737204A53F7} = {7881FA74-7FC4-4068-80F6-1B38A9A46057}
+		{679295D4-8FC7-4E4D-BF44-B78D1E958D3F} = {6CC06E4E-9896-42D8-9DAE-DB49DDDEDDB8}
+	EndGlobalSection
+EndGlobal
