@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{473FA86A-19EE-4648-B2EB-4020BA3479C0}</ProjectGuid>
+    <ProjectGuid>{A0990BA7-FAB2-4320-8504-CEBF316DF1F6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HQOrderEntryImplementation</RootNamespace>
-    <AssemblyName>HQOrderEntryImplementation</AssemblyName>
+    <RootNamespace>LocalOrderEntryInterface</RootNamespace>
+    <AssemblyName>LocalOrderEntryInterface</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,26 +38,11 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HQOrderEntryService.cs" />
+    <Compile Include="IReceiveOrderEntryLocalBranch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HelperLib\HelperLib.csproj">
-      <Project>{679295d4-8fc7-4e4d-bf44-b78d1e958d3f}</Project>
-      <Name>HelperLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HQOrderEntryServiceInterface\HQOrderEntryServiceInterface.csproj">
-      <Project>{e383543d-f779-4bee-b8fb-c737204a53f7}</Project>
-      <Name>HQOrderEntryServiceInterface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LocalOrderEntryInterface\LocalOrderEntryInterface.csproj">
-      <Project>{a0990ba7-fab2-4320-8504-cebf316df1f6}</Project>
-      <Name>LocalOrderEntryInterface</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

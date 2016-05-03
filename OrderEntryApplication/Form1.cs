@@ -22,7 +22,7 @@ namespace OrderEntryApplication
 
         private static void SendMessage(string data)
         {
-            MessageQueue messageQueue = new MessageQueue(@".\private\OrderEntryQueue");
+            MessageQueue messageQueue = new MessageQueue(@".\private$\OrderEntryQueue");
 
             System.Messaging.Message message = new System.Messaging.Message();
 
