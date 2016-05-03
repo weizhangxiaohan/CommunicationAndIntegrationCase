@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HQOrderEntryServiceInterface;
 using LocalOrderEntryInterface;
+using HQOrderEntryImplementation.HQProductServiceASMXClient;
 
 namespace HQOrderEntryImplementation
 {
@@ -33,7 +34,17 @@ namespace HQOrderEntryImplementation
 
         private bool CheckIfOrderIsValid(HQOrderEntry orderEntry) 
         {
-            //Add code later
+            ProductServiceSoapClient client = new ProductServiceSoapClient();
+            bool orderIsValid = true;
+
+            foreach (var item in orderEntry.OrderOrderedProducts)
+            {
+                if (!orderIsValid)
+                {
+                    break;
+                }
+                orderIsValid = client.IsProductAvailableForCountry(item.ProductID,orderEntry.OrderCustomer.CustomerCountryCode);
+            }
             return true;
         }
 
