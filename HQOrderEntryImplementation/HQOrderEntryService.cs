@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using HQOrderEntryServiceInterface;
 using LocalOrderEntryInterface;
 using HQOrderEntryImplementation.HQProductServiceASMXClient;
+using System.Net;
+using System.IO;
+using HelperLib;
 
 namespace HQOrderEntryImplementation
 {
@@ -66,8 +69,14 @@ namespace HQOrderEntryImplementation
 
         private string TranslateProductDescription(string productID,string languageCode) 
         {
-            //Add code later
-            return "";
+            HttpWebRequest webRequest = (HttpWebRequest)HttpWebRequest.Create(string.Format(@"http://localhost:53170/HQLocalizationService/TranslateProductDescription/{0}/{1}",languageCode,productID));
+            webRequest.ContentLength = 0;
+            HttpWebResponse webResponse = (HttpWebResponse)webRequest.GetResponse();
+            Encoding encoding = Encoding.GetEncoding(1252);
+            StreamReader reader = new StreamReader(webResponse.GetResponseStream(),encoding);
+            string response = reader.ReadToEnd();
+            string result = GenericSerializer<string>.DeSerializeDC(response);
+            return result;
         }
     }
 }
