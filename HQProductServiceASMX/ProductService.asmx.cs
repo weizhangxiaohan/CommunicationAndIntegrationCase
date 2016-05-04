@@ -7,18 +7,18 @@ using System.Web.Services;
 namespace HQProductServiceASMX
 {
     /// <summary>
-    /// ProductService 的摘要说明
+    /// Summary description for ProductService
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    // 若要允许使用 ASP.NET AJAX 从脚本中调用此 Web 服务，请取消注释以下行。 
+    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
     public class ProductService : System.Web.Services.WebService
     {
 
         [WebMethod]
-        public bool IsProductAvailableForCountry(string ProductID,string countryCode)
+        public bool IsProductAvailableForCountry(string ProductID, string countryCode)
         {
             if (countryCode == "BE" || countryCode == "AR" || countryCode == "AT")
             {
@@ -28,7 +28,7 @@ namespace HQProductServiceASMX
             {
                 return false;
             }
-            
+
         }
     }
 }

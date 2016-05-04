@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="IsProductAvailableForCountryResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>HQOrderEntryImplementation.HQProductServiceASMXClient.IsProductAvailableForCountryResponse</TypeInfo>
+   <TypeInfo>HQOrderEntryImplementation.HQProductServiceASMXClient.IsProductAvailableForCountryResponse, Service References.HQProductServiceASMXClient.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>
