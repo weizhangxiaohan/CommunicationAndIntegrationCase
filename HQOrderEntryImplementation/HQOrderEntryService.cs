@@ -32,6 +32,7 @@ namespace HQOrderEntryImplementation
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
             }
         }
 
@@ -94,7 +95,7 @@ namespace HQOrderEntryImplementation
 
         private string TranslateProductDescription(string productID,string languageCode) 
         {
-            HttpWebRequest webRequest = (HttpWebRequest)HttpWebRequest.Create(string.Format(@"http://localhost:53170/HQLocalizationService/TranslateProductDescription/{0}/{1}",languageCode,productID));
+            HttpWebRequest webRequest = (HttpWebRequest)HttpWebRequest.Create(string.Format(@"http://localhost:8083/HQLocalizationService/TranslateProductDescriptions/{0}/{1}", languageCode, productID));
             webRequest.ContentLength = 0;
             HttpWebResponse webResponse = (HttpWebResponse)webRequest.GetResponse();
             Encoding encoding = Encoding.GetEncoding(1252);

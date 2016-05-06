@@ -14,7 +14,7 @@ namespace HQOrderEntryServiceHost
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Started");
+            Console.WriteLine("Service-OrderEntry-Started");
             try
             {
                 ServiceHost host = new ServiceHost(typeof(HQOrderEntryService));
