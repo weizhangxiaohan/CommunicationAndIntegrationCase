@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HQOrderEntryService.cs" />
+    <Compile Include="LocalOrderEntryProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\HQProductServiceASMXClient\Reference.cs">
       <AutoGen>True</AutoGen>

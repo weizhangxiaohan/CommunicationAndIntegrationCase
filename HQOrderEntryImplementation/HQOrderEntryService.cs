@@ -53,13 +53,38 @@ namespace HQOrderEntryImplementation
 
         private LocalOrderEntry ConvertOrderEntrySchema(HQOrderEntry orderEntry)
         {
-            //Add code later
-            return null;
+            LocalOrderEntry localOrderEntry = new LocalOrderEntry();
+            localOrderEntry.CustomerName = orderEntry.OrderCustomer.CustomerName;
+            localOrderEntry.CustomerAddressLine1 = orderEntry.OrderCustomer.CustomerAddressLine1;
+            localOrderEntry.CustomerAddressLine2 = orderEntry.OrderCustomer.CustomerAddressLine2;
+            localOrderEntry.CustomerCountryCode = orderEntry.OrderCustomer.CustomerCountryCode;
+            localOrderEntry.OrderOrderedProducts = new List<LocalOrderEntryInterface.OrderedProducts>();
+
+            foreach (var item in orderEntry.OrderOrderedProducts)
+            {
+                string translation = TranslateProductDescription(item.ProductID, orderEntry.OrderCustomer.CustomerCountryCode);
+
+                localOrderEntry.OrderOrderedProducts.Add(new LocalOrderEntryInterface.OrderedProducts 
+                {
+                    ProductID = orderEntry.OrderCustomer.CustomerCountryCode+"/"+item.ProductID,
+                    Quantity = item.Quantity,
+                    LocalizeDescription = translation
+                });
+            }
+            return localOrderEntry;
         }
 
         private void RouteOrderEntry(LocalOrderEntry localOrderEntry)
         {
-            //Add code later
+            try
+            {
+                LocalOrderEntryProxy proxy = new LocalOrderEntryProxy();
+                int a = proxy.SendLocalOrderEntry(localOrderEntry);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void SendToInvalidOrderQueue(MsmqMessage<HQOrderEntry> orderEntryMsg) 
