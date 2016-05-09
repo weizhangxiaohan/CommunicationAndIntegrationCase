@@ -43,11 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
-    <Compile Include="HQOrderEntry.cs" />
     <Compile Include="IOrderEntryService.cs" />
-    <Compile Include="OrderedProducts.cs" />
+    <Compile Include="ISubscribeToOrderTrackingInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RealTimeOrderTrackingCallBackContract\RealTimeOrderTrackingCallBackContract.csproj">
+      <Project>{e00775e8-923d-4c90-bb65-1307a23ce49d}</Project>
+      <Name>RealTimeOrderTrackingCallBackContract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

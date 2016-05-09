@@ -23,6 +23,8 @@ namespace HQOrderEntryImplementation
                 {
                     Console.WriteLine("got one");
                     RouteOrderEntry(ConvertOrderEntrySchema(orderEntryMsg.Body));
+                    SubscribeService subscribeService = SubscribeServiceSingleton.GetInstance();
+                    subscribeService.PulishOrderEntrySignal(orderEntryMsg.Body.OrderCustomer.CustomerCountryCode);
                 }
                 else 
                 {

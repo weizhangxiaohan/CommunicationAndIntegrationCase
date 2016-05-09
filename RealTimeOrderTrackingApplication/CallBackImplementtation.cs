@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RealTimeOrderTrackingCallBackContract;
+using System.Windows.Forms;
 
 namespace RealTimeOrderTrackingApplication
 {
@@ -18,7 +19,7 @@ namespace RealTimeOrderTrackingApplication
 
         public void NewOrderForCountry(string countryID)
         {
-            throw new NotImplementedException();
+            MessageBox.Show(countryID);
         }
     }
 }

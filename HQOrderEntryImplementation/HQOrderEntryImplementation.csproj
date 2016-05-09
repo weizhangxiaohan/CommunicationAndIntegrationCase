@@ -51,6 +51,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="SubscribeService.cs" />
+    <Compile Include="SubscribeServiceSingleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HelperLib\HelperLib.csproj">
@@ -64,6 +66,10 @@
     <ProjectReference Include="..\LocalOrderEntryInterface\LocalOrderEntryInterface.csproj">
       <Project>{a0990ba7-fab2-4320-8504-cebf316df1f6}</Project>
       <Name>LocalOrderEntryInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RealTimeOrderTrackingCallBackContract\RealTimeOrderTrackingCallBackContract.csproj">
+      <Project>{e00775e8-923d-4c90-bb65-1307a23ce49d}</Project>
+      <Name>RealTimeOrderTrackingCallBackContract</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

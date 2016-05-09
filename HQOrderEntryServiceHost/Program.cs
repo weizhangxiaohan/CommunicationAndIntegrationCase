@@ -19,6 +19,10 @@ namespace HQOrderEntryServiceHost
             {
                 ServiceHost host = new ServiceHost(typeof(HQOrderEntryService));
                 host.Open();
+
+                SubscribeService subscribeService = SubscribeServiceSingleton.GetInstance();
+                ServiceHost serviceHostSubscribeService = new ServiceHost(subscribeService);
+                serviceHostSubscribeService.Open();
                 Console.WriteLine("OK");
             }
             catch (Exception ex)
