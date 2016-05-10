@@ -61,6 +61,10 @@
       <Project>{e383543d-f779-4bee-b8fb-c737204a53f7}</Project>
       <Name>HQOrderEntryServiceInterface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LocalOrderEntryInterface\LocalOrderEntryInterface.csproj">
+      <Project>{a0990ba7-fab2-4320-8504-cebf316df1f6}</Project>
+      <Name>LocalOrderEntryInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

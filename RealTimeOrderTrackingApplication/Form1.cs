@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HQOrderEntryServiceInterface;
+using System.ServiceModel;
 
 namespace RealTimeOrderTrackingApplication
 {
@@ -15,6 +17,16 @@ namespace RealTimeOrderTrackingApplication
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CallBackImplementtation callBack = new CallBackImplementtation();
+            InstanceContext context = new InstanceContext(callBack);
+
+            ChannelFactory<ISubscribeToOrderTrackingInfo> cf = new DuplexChannelFactory<ISubscribeToOrderTrackingInfo>(context,new NetTcpBinding());
+            ISubscribeToOrderTrackingInfo subscriber = cf.CreateChannel(new EndpointAddress("net.tcp://localhost:9875/"));
+            subscriber.Subscribe();
         }
     }
 }
