@@ -46,7 +46,7 @@ namespace OrderEntryApplication
                 CustomerName = "WROX",
                 CustomerAddressLine1 = "CustomerAddressLine1",
                 CustomerAddressLine2 = "CustomerAddressLine2",
-                CustomerCountryCode = "BE" 
+                CustomerCountryCode = "AR" 
             };
 
             test.OrderOrderedProducts = new List<OrderedProducts>();

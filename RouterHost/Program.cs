@@ -24,6 +24,8 @@ namespace RouterHost
                 
                 Console.WriteLine(ex.Message);
             }
+
+            Console.ReadKey();
         }
     }
 }
